@@ -1,5 +1,5 @@
 ---
-title: tips: install scrollkeeper-0.3.14 @ cygwin
+title: tips install scrollkeeper-0.3.14 @ cygwin
 date: '2006-09-13'
 ---
 I want to install gnome under cygwin environment, so I followed the BLFS 6.1 guide book. But cygwin doesn't provide scrollkeeper package and normal g-b-s method doesn't work, either. After a lot of Google, I turned to cygport, a building system for cygwin. But cygport is still under development and it doesn't provide the ebuild I need. I have to write it on my own. Here is my experiences:

@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"] # This theme does not currently use 
 
 [Params]
     tagline = "Kozan and Ian"
-    author = "Yiyan Zhou"
+    author = "Yiyan Zhou (沪ICP备12034897号-1)"
     description = "Full-stack web developer and UI/UX enthusiast based in Shanghai, China."
     logoBig = "/images/osprey-logo.png"
     logoSmall = "/images/osprey-logo.png"

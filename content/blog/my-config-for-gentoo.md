@@ -4,8 +4,6 @@ date: '2005-10-31'
 description:
 categories:
 - tech
-tags:
-	
 ---
 	# These settings were set by the catalyst build script that automatically
 	built this stage

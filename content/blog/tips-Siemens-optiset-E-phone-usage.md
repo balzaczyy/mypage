@@ -1,5 +1,5 @@
 ---
-title: Tips: Siemens optiset E phone usage
+title: Tips Siemens optiset E phone usage
 date: '2006-09-14'
 description:
 categories:

@@ -1,4 +1,4 @@
-baseURL = "http://blog.zhouyiyan.cn/"
+baseURL = "https://blog.zhouyiyan.cn/"
 languageCode = "en-us"
 title = "一言"
 tags = ["portfolio", "blog", "web development"]

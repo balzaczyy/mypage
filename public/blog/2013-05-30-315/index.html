@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <title>
+            
+            
+                升级至Lucene 4.3.0 | 一言
+            
+        </title>
+
+        <meta name="title" content="升级至Lucene 4.3.0 | 一言">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer-when-downgrade">
+        <meta name="generator" content="">
+        <base href="http://blog.zhouyiyan.cn/">
+        <meta name="description" content="Full-stack web developer and UI/UX enthusiast based in Shanghai, China.">
+        
+        <meta name="author" content="Yiyan Zhou (沪ICP备12034897号-1)">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@balzaczyy">
+        <meta name="twitter:creator" content="@balzaczyy">
+        
+        <meta property="og:title" content="升级至Lucene 4.3.0 | 一言">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://blog.zhouyiyan.cn/">
+        <meta property="og:image" content="http://blog.zhouyiyan.cn//images/osprey.png">
+        <meta property="og:description" content="Full-stack web developer and UI/UX enthusiast based in Shanghai, China.">
+        
+
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/logo/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="http://blog.zhouyiyan.cn/images/logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="http://blog.zhouyiyan.cn/images/logo/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="http://blog.zhouyiyan.cn/images/logo/favicon-16x16.png">
+        <link rel="manifest" href="images/logo/manifest.json">
+        <meta name="msapplication-TileColor" content="#FFF">
+        <meta name="msapplication-TileImage" content="/images/logo/ms-icon-144x144.png">
+        <meta name="theme-color" content="#FFF">
+        
+
+        <link rel="canonical" href="http://blog.zhouyiyan.cn/blog/2013-05-30-315/">
+        
+        <link rel="stylesheet" href="http://blog.zhouyiyan.cn//styles/main.css" type="text/css">
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/github.min.css">
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-897555-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+    </head>
+
+    <body>
+        
+
+        
+
+        <nav class="row middle-xs center-xs">
+            <div class="col-xs-6 col-sm-1 logo">
+                <a href="http://blog.zhouyiyan.cn/"><img src="http://blog.zhouyiyan.cn/images/osprey-logo.png" alt="一言"></a>
+            </div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#about">About</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#work">Work</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#blog">Blog</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#contact">Contact</a></h3></div>
+            
+            <div class="col-xs-6 col-sm-1 nav-toggle">
+                <a href="" class="nav-icon" onclick="return false"><img src="http://blog.zhouyiyan.cn/images/icon-menu.png" alt="Open Menu"><img src="http://blog.zhouyiyan.cn/images/icon-x.png" alt="Close Menu" style="display: none;"></a>
+            </div>
+        </nav>
+        <section class="nav-full row middle-xs center-xs">
+            <div class="col-xs-12">
+                <div class="row middle-xs center-xs">
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#about">About</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#work">Work</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#blog">Blog</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#contact">Contact</a></h1></div>
+                    
+                </div>
+            </div>
+        </section>
+        <main>
+
+
+    <section class="container">
+        <section class="content">
+            <h1> 升级至Lucene 4.3.0 </h1>
+
+            <div class="sub-header">
+                May 2013 · 1 minute read
+            </div>
+
+            <div class="entry-content">
+                <p>项目上原来使用的是Lucene 3.5。从Lucene 2.9.2升级上来的过程很顺利，因为大多数老的API从2.9.0开始被表明为废除，而且给出了很好的迁移建议，所以整个过程其实在2.4升级到2.9的时候就已经基本完成了，除了少数很hack的API（比如说Directory的touch动作）。这种使用Deprecate标签并给出改动建议的方式是API升级的一个很好的实践，体现了API提供者对使用者的一种关心和体谅。但是从3.5到4.3的过程却异常艰辛，唯一可以参考的就是这份<a href="http://lucene.apache.org/core/4_3_0/MIGRATE.html" target="_blank">迁移指南</a>，以及Google搜索。
+<ol>
+    <li>先是很多类的包名改变了。这个简单，利用IDE的自动整理包导入来解决。</li>
+    <li>IndexReader的很多方法转移到了DirectoryReader下面。这个类似于FsDirectory和Directory的关系，但是新的AtomicReader/CompositeReader/DirectoryReader体系我还不是很理解，似乎为了性能考虑，要写很多重复的代码了。</li>
+    <li>许多使用字符串的地方被替换成了字节数组引用。这让我想起了Go的Slice⋯⋯ Anyway，所有分析器的构造函数现在接受CharArraySet了。</li>
+    <li>SearcherWarmer没有了。尼玛，标成experimental的API真是短命啊。</li>
+    <li>TermEnum被以Fields为中心的一系列API替换了，避免了不必要的关闭动作。但神奇的是，迁移指南本身推荐的MultiFields类本身就是实验性质，我滴天哪！而且指南的编排也有些问题，我愣是第一遍没找到，还是看了这个<a href="http://stackoverflow.com/questions/15290980/how-to-get-all-terms-for-a-lucene-field-in-lucene-4" target="_blank">StackFlow上的问题</a>才知道的。</li>
+    <li>FieldSelector没有了。不过还好，大多数原先的API接受直接使用字符串集合来制定字段。</li>
+    <li>IndexReader.lastModified()也没有了。搜了一下论坛，建议使用IndexReader.getVersion()来判断索引的更新情况，但这显然不能满足我的要求。只好自己写了一个索引文件的时间戳判断。</li>
+</ol>
+虽然很麻烦，但是迁移总算是完成了。</p>
+
+            </div>
+
+            <div class="pagination">
+                
+                    <a href="http://blog.zhouyiyan.cn/blog/2013-05-29-312/">&laquo; 撞车了</a>
+                
+                
+                    <a href="http://blog.zhouyiyan.cn/blog/2013-05-30-317/">Go语言的数据竞争检测 &raquo;</a>
+                
+            </div>
+        </section>
+        <br>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+            
+            
+            if (window.location.hostname == "localhost")
+                return;
+            var disqus_shortname = 'zhouyiyan';
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view comments powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>.</noscript>
+</section>
+
+    </section>
+
+        </main>
+        <footer class="row middle-xs center-xs">
+            
+            <div class="col-xs-3 col-md-2"><a href="https://github.com/balzaczyy">GitHub</a></div>
+            
+            
+            <div class="col-xs-3 col-md-2"><a href="https://linkedin.com/in/balzaczyy">LinkedIn</a></div>
+            
+            
+            <div class="col-xs-3 col-md-2"><a href="https://twitter.com/balzaczyy">Twitter</a></div>
+            
+            
+            <div class="col-xs-12">
+                
+                Copyright &copy; 2017 一言.
+                
+                
+                Theme developed by <a href="https://tomanistor.com">Toma Nistor</a>.
+                
+            </div>
+            
+            
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+            
+            <script src="http://blog.zhouyiyan.cn/scripts/main.js" type="text/javascript"></script>
+            
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+        </footer>
+    </body>
+</html>
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <title>
+            
+            
+                Active Directory架设补充 | 一言
+            
+        </title>
+
+        <meta name="title" content="Active Directory架设补充 | 一言">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer-when-downgrade">
+        <meta name="generator" content="">
+        <base href="http://blog.zhouyiyan.cn/">
+        <meta name="description" content="Full-stack web developer and UI/UX enthusiast based in Shanghai, China.">
+        
+        <meta name="author" content="Yiyan Zhou (沪ICP备12034897号-1)">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@balzaczyy">
+        <meta name="twitter:creator" content="@balzaczyy">
+        
+        <meta property="og:title" content="Active Directory架设补充 | 一言">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://blog.zhouyiyan.cn/">
+        <meta property="og:image" content="http://blog.zhouyiyan.cn//images/osprey.png">
+        <meta property="og:description" content="Full-stack web developer and UI/UX enthusiast based in Shanghai, China.">
+        
+
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/logo/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="http://blog.zhouyiyan.cn/images/logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="http://blog.zhouyiyan.cn/images/logo/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="http://blog.zhouyiyan.cn/images/logo/favicon-16x16.png">
+        <link rel="manifest" href="images/logo/manifest.json">
+        <meta name="msapplication-TileColor" content="#FFF">
+        <meta name="msapplication-TileImage" content="/images/logo/ms-icon-144x144.png">
+        <meta name="theme-color" content="#FFF">
+        
+
+        <link rel="canonical" href="http://blog.zhouyiyan.cn/blog/active-directory%E6%9E%B6%E8%AE%BE%E8%A1%A5%E5%85%85/">
+        
+        <link rel="stylesheet" href="http://blog.zhouyiyan.cn//styles/main.css" type="text/css">
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/github.min.css">
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-897555-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+    </head>
+
+    <body>
+        
+
+        
+
+        <nav class="row middle-xs center-xs">
+            <div class="col-xs-6 col-sm-1 logo">
+                <a href="http://blog.zhouyiyan.cn/"><img src="http://blog.zhouyiyan.cn/images/osprey-logo.png" alt="一言"></a>
+            </div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#about">About</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#work">Work</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#blog">Blog</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#contact">Contact</a></h3></div>
+            
+            <div class="col-xs-6 col-sm-1 nav-toggle">
+                <a href="" class="nav-icon" onclick="return false"><img src="http://blog.zhouyiyan.cn/images/icon-menu.png" alt="Open Menu"><img src="http://blog.zhouyiyan.cn/images/icon-x.png" alt="Close Menu" style="display: none;"></a>
+            </div>
+        </nav>
+        <section class="nav-full row middle-xs center-xs">
+            <div class="col-xs-12">
+                <div class="row middle-xs center-xs">
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#about">About</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#work">Work</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#blog">Blog</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#contact">Contact</a></h1></div>
+                    
+                </div>
+            </div>
+        </section>
+        <main>
+
+
+    <section class="container">
+        <section class="content">
+            <h1> Active Directory架设补充 </h1>
+
+            <div class="sub-header">
+                August 2005 · 1 minute read
+            </div>
+
+            <div class="entry-content">
+                <p>接着上回在局域网内用Win2000 Server架设Active Directory后，如果发现域控制器经常当机，可以通过通过在一个域内架设两个域控制器来提供安全性。操作系统的帮助文件在很不起眼的地方说明了，单一域内多个域控制器能够提高性能并且增强容错能力，但是怎样做它并没有细说，只是提到了单一主操作的概念。单一主操作（Single Master Operation）是指在同一个域内，仅能由一个域控制器进行的操作，这类操作不能通过多个域控制器进行。在Active Directory Site and Trust里面可以设置由谁来作为Master，但是这样一来不还是一种集中式管理吗？而且主控制器当掉后，辅助控制器能不能立即发挥作用还是个问题，因为DNS里面记录的域控制器只有主控制器而已，能不能自动切换还有待BC下次作了实验才知道。但是多个域控制器的作用还是很明显的，首先，如果主控制器坏掉，通过手工设置DNS和应用服务器能够很快的切换成辅控制器操作，给修复主控制器赢得了时间；其次，通过分流连接和账户的备份，也能够间接的提高主控制器的可使用性。</p>
+
+<p>唉，大学里面竟知道好好学习了，好多东西都没玩过，这种组网什么的应该是很简单才对的，现在搞成这个样子……</p>
+
+            </div>
+
+            <div class="pagination">
+                
+                    <a href="http://blog.zhouyiyan.cn/blog/%E6%89%93%E6%8A%98%E7%9A%84%E5%AE%9E%E8%B4%A8/">&laquo; 打折的实质</a>
+                
+                
+                    <a href="http://blog.zhouyiyan.cn/blog/%E6%98%9F%E7%90%83%E5%A4%A7%E6%88%98%E6%96%B0%E7%9A%84%E5%B8%8C%E6%9C%9B/">星球大战：新的希望 &raquo;</a>
+                
+            </div>
+        </section>
+        <br>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+            
+            
+            if (window.location.hostname == "localhost")
+                return;
+            var disqus_shortname = 'zhouyiyan';
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view comments powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>.</noscript>
+</section>
+
+    </section>
+
+        </main>
+        <footer class="row middle-xs center-xs">
+            
+            <div class="col-xs-3 col-md-2"><a href="https://github.com/balzaczyy">GitHub</a></div>
+            
+            
+            <div class="col-xs-3 col-md-2"><a href="https://linkedin.com/in/balzaczyy">LinkedIn</a></div>
+            
+            
+            <div class="col-xs-3 col-md-2"><a href="https://twitter.com/balzaczyy">Twitter</a></div>
+            
+            
+            <div class="col-xs-12">
+                
+                Copyright &copy; 2017 一言.
+                
+                
+                Theme developed by <a href="https://tomanistor.com">Toma Nistor</a>.
+                
+            </div>
+            
+            
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+            
+            <script src="http://blog.zhouyiyan.cn/scripts/main.js" type="text/javascript"></script>
+            
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+        </footer>
+    </body>
+</html>
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <title>
+            
+            
+                超多的Bug | 一言
+            
+        </title>
+
+        <meta name="title" content="超多的Bug | 一言">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer-when-downgrade">
+        <meta name="generator" content="">
+        <base href="http://blog.zhouyiyan.cn/">
+        <meta name="description" content="Full-stack web developer and UI/UX enthusiast based in Shanghai, China.">
+        
+        <meta name="author" content="Yiyan Zhou (沪ICP备12034897号-1)">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@balzaczyy">
+        <meta name="twitter:creator" content="@balzaczyy">
+        
+        <meta property="og:title" content="超多的Bug | 一言">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://blog.zhouyiyan.cn/">
+        <meta property="og:image" content="http://blog.zhouyiyan.cn//images/osprey.png">
+        <meta property="og:description" content="Full-stack web developer and UI/UX enthusiast based in Shanghai, China.">
+        
+
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/logo/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="http://blog.zhouyiyan.cn/images/logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="http://blog.zhouyiyan.cn/images/logo/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="http://blog.zhouyiyan.cn/images/logo/favicon-16x16.png">
+        <link rel="manifest" href="images/logo/manifest.json">
+        <meta name="msapplication-TileColor" content="#FFF">
+        <meta name="msapplication-TileImage" content="/images/logo/ms-icon-144x144.png">
+        <meta name="theme-color" content="#FFF">
+        
+
+        <link rel="canonical" href="http://blog.zhouyiyan.cn/blog/%E8%B6%85%E5%A4%9A%E7%9A%84bug/">
+        
+        <link rel="stylesheet" href="http://blog.zhouyiyan.cn//styles/main.css" type="text/css">
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/github.min.css">
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-897555-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+    </head>
+
+    <body>
+        
+
+        
+
+        <nav class="row middle-xs center-xs">
+            <div class="col-xs-6 col-sm-1 logo">
+                <a href="http://blog.zhouyiyan.cn/"><img src="http://blog.zhouyiyan.cn/images/osprey-logo.png" alt="一言"></a>
+            </div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#about">About</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#work">Work</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#blog">Blog</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#contact">Contact</a></h3></div>
+            
+            <div class="col-xs-6 col-sm-1 nav-toggle">
+                <a href="" class="nav-icon" onclick="return false"><img src="http://blog.zhouyiyan.cn/images/icon-menu.png" alt="Open Menu"><img src="http://blog.zhouyiyan.cn/images/icon-x.png" alt="Close Menu" style="display: none;"></a>
+            </div>
+        </nav>
+        <section class="nav-full row middle-xs center-xs">
+            <div class="col-xs-12">
+                <div class="row middle-xs center-xs">
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#about">About</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#work">Work</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#blog">Blog</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#contact">Contact</a></h1></div>
+                    
+                </div>
+            </div>
+        </section>
+        <main>
+
+
+    <section class="container">
+        <section class="content">
+            <h1> 超多的Bug </h1>
+
+            <div class="sub-header">
+                August 2014 · 1 minute read
+            </div>
+
+            <div class="entry-content">
+                <p>最近我开始了GoLucene中涉及解析器和符号流逻辑的移植。可能是前段时间的压力过大，竟然发现了许多原本不会出现的bug。这些bug也很有意思，症状和原因往往牛头不对马嘴，花了我很多的跟踪时间。要怪只能怪Go没有好的图形化单步调试工具，GDB什么的我暂时也没时间学，一条一条的状态打印让人那个捉急啊。</p>
+
+<p>第一个错发生在GoLucene内部的一条断言上，说某个字段应该可以被索引，但是标志位不对。按说这个字段类型是个静态值，改改也就对了。但改完，发现另外一个断言又错了。仔细看代码，发现原来Lucene里面StringField和TextField里面分别由STORED和NOT_STOREF两个类型，而且各自的标志位都不一样。因为Go没有类级别的scope，所以这种类型名必须要加上类的名字作为前缀加以区别。大多数的时候是不需要加的，毕竟重名的不多，但还是被我碰上了。</p>
+
+<p>第二个错也是一个断言发现的（感谢Lucene内部大量的断言）。先是StandardTokenizer无法正确的抽取符号，debug发现内部的input从来没有被赋过值，但是代码上是有赋值的。再仔细看，发现在StandardTokenizer的reset方法里面没有调用Tokenizer父类的reset方法。加上后就直接“TokenStream contract violation”断言，原来是参数和字段重名，忘记加上类名了，而且断言条件也写反了。</p>
+
+<p>第三个错和整数类型有关。Go中的int很奇特，在64位运行时里是64位的（废话……）。平时也没什么问题，但是如果是带符号位位移（在Java里面是&gt;&gt;&gt;)，而且没有制定uint32的话，得出的结果就不正确。糟糕的是症状是数组下标越位，经过无数的反向跟踪，才发现是哈希函数里的带符号位位移错了，因为int是64位的。</p>
+
+<p>第四个错是死循环，而且还挺典型的。在Java里面有段代码</p>
+
+<pre><code>main:
+while (off &amp;lt;= limit) {
+    // ...
+    while (true) {
+        if (off &amp;gt;= matchLimit) {
+            break main;
+        // do something
+    }
+    // ...
+}
+</code></pre>
+
+<p>在Go里面我写成了</p>
+
+<pre><code>for offset &amp;lt;= limit {
+    // ...
+    var hasMore bool
+    for hasMore = offset &amp;lt; matchLimit; hasMore; offset++ {
+        // do something forever now
+    }
+    if !hasMore {
+        break
+    }
+    // ...
+}
+</code></pre>
+
+<p>因为我忘记重新计算hasMore标志了……其实只要协程下面这样就好了。</p>
+
+<pre><code>for offset &amp;lt;= limit {
+    // ...
+    var hasMore = offset &amp;lt; matchLimit
+    for hasMore {
+        // do someting
+        offset++
+        hasMore = offset &amp;lt; matchLimit
+    }
+    if !hasMore {
+        break
+    }
+    // ...
+}
+</code></pre>
+
+<p>第五个错也很典型。Go的类继承通过对象嵌入实现，当需要虚类来传值的时候，我一般会选择抽出一个interface加一个中间对象。但在这个bug中，我选择了使用虚类，然后用一个Value字段表示实际的对象。</p>
+
+<pre><code>指针 -&gt; 基础类 { 基础字段, Value -&gt; 实际类 { 基础类指针, 其他字段 } }
+</code></pre>
+
+<p>这是一种挺tricky的解法，比较适合中间抽象类只有一层的情况。使用的时候经常需要做类型转换，比如说ptr.Value.(*ConcreteClass).concreteValue等等。容易出问题的就是初始化的时候，没有把类似双链表的指针指对。症状其实一点也看不出是这个问题，总是报排序错误，但实际上是FreqPostingsPostingsArray这个类没有正确的指向基础虚类，造成基础字段修改的值，没有得到更新，永远是空值。</p>
+
+<p>最后一个错也和整数类型有关。要记住，Go的byte是0到255，所以千万不要以为两个byte相减会出现负数。</p>
+
+<p>移植中最痛苦的就是修bug了。</p>
+
+            </div>
+
+            <div class="pagination">
+                
+                    <a href="http://blog.zhouyiyan.cn/blog/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%81%9Agolucene/">&laquo; 为什么要做GoLucene</a>
+                
+                
+                    <a href="http://blog.zhouyiyan.cn/blog/svg%E5%92%8Ccanvas/">SVG和Canvas &raquo;</a>
+                
+            </div>
+        </section>
+        <br>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+            
+            
+            if (window.location.hostname == "localhost")
+                return;
+            var disqus_shortname = 'zhouyiyan';
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view comments powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>.</noscript>
+</section>
+
+    </section>
+
+        </main>
+        <footer class="row middle-xs center-xs">
+            
+            <div class="col-xs-3 col-md-2"><a href="https://github.com/balzaczyy">GitHub</a></div>
+            
+            
+            <div class="col-xs-3 col-md-2"><a href="https://linkedin.com/in/balzaczyy">LinkedIn</a></div>
+            
+            
+            <div class="col-xs-3 col-md-2"><a href="https://twitter.com/balzaczyy">Twitter</a></div>
+            
+            
+            <div class="col-xs-12">
+                
+                Copyright &copy; 2017 一言.
+                
+                
+                Theme developed by <a href="https://tomanistor.com">Toma Nistor</a>.
+                
+            </div>
+            
+            
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+            
+            <script src="http://blog.zhouyiyan.cn/scripts/main.js" type="text/javascript"></script>
+            
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+        </footer>
+    </body>
+</html>
+

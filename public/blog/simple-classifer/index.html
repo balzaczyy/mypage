@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <title>
+            
+            
+                Simple Classifer | 一言
+            
+        </title>
+
+        <meta name="title" content="Simple Classifer | 一言">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer-when-downgrade">
+        <meta name="generator" content="">
+        <base href="http://blog.zhouyiyan.cn/">
+        <meta name="description" content="Full-stack web developer and UI/UX enthusiast based in Shanghai, China.">
+        
+        <meta name="author" content="Yiyan Zhou (沪ICP备12034897号-1)">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@balzaczyy">
+        <meta name="twitter:creator" content="@balzaczyy">
+        
+        <meta property="og:title" content="Simple Classifer | 一言">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://blog.zhouyiyan.cn/">
+        <meta property="og:image" content="http://blog.zhouyiyan.cn//images/osprey.png">
+        <meta property="og:description" content="Full-stack web developer and UI/UX enthusiast based in Shanghai, China.">
+        
+
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="http://blog.zhouyiyan.cn/images/logo/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/logo/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="http://blog.zhouyiyan.cn/images/logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="http://blog.zhouyiyan.cn/images/logo/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="http://blog.zhouyiyan.cn/images/logo/favicon-16x16.png">
+        <link rel="manifest" href="images/logo/manifest.json">
+        <meta name="msapplication-TileColor" content="#FFF">
+        <meta name="msapplication-TileImage" content="/images/logo/ms-icon-144x144.png">
+        <meta name="theme-color" content="#FFF">
+        
+
+        <link rel="canonical" href="http://blog.zhouyiyan.cn/blog/simple-classifer/">
+        
+        <link rel="stylesheet" href="http://blog.zhouyiyan.cn//styles/main.css" type="text/css">
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/github.min.css">
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-897555-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+    </head>
+
+    <body>
+        
+
+        
+
+        <nav class="row middle-xs center-xs">
+            <div class="col-xs-6 col-sm-1 logo">
+                <a href="http://blog.zhouyiyan.cn/"><img src="http://blog.zhouyiyan.cn/images/osprey-logo.png" alt="一言"></a>
+            </div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#about">About</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#work">Work</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#blog">Blog</a></h3></div>
+            
+            <div class="col-xs-3 col-sm-2"><h3><a href="http://blog.zhouyiyan.cn/#contact">Contact</a></h3></div>
+            
+            <div class="col-xs-6 col-sm-1 nav-toggle">
+                <a href="" class="nav-icon" onclick="return false"><img src="http://blog.zhouyiyan.cn/images/icon-menu.png" alt="Open Menu"><img src="http://blog.zhouyiyan.cn/images/icon-x.png" alt="Close Menu" style="display: none;"></a>
+            </div>
+        </nav>
+        <section class="nav-full row middle-xs center-xs">
+            <div class="col-xs-12">
+                <div class="row middle-xs center-xs">
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#about">About</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#work">Work</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#blog">Blog</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="http://blog.zhouyiyan.cn/#contact">Contact</a></h1></div>
+                    
+                </div>
+            </div>
+        </section>
+        <main>
+
+
+    <section class="container">
+        <section class="content">
+            <h1> Simple Classifer </h1>
+
+            <div class="sub-header">
+                December 2006 · 1 minute read
+            </div>
+
+            <div class="entry-content">
+                <p>这两天在修改论文，导师说要多加一些深度和创新点，可以补充一些模糊推理、神经网络之类的东东。虽然本科学习过一些数据挖掘的算法，而且数据挖掘也是一种机器学习，但绝不是AI之类的范畴，因此说起模糊推理和神经网络，也会比较感冒。曾经想要好好学习一个<a href="http://beta.blogger.com/classifier4j.sourceforge.net">Java下的分类器</a>，但是工作和论文让BC无法分心，而且目前又在开发一个帮助Support更快上手的基于Excel的报表生成器。在经过来回踱步四五次后，想到一个最简单的基于01神经网络的分类器改进，丰满论文之余贡献与此。</p>
+
+<p>前提：一个基于模型的分类器，输出为M(p)，p为离散参数。如果可以确定M(p)能够起到分类作用，但无法确定参数p，可以使用01神经网络进行二次分类学习。以下全部变量均属于[0,1]。</p>
+
+<p>设新的分类器C输出[0,1]，结构如下：
+0&mdash;&mdash;-&gt;J0&mdash;<br />
+M(P1)&mdash;&gt;J1&mdash;-<br />
+M(P2)&mdash;&gt;J2&mdash;&ndash;<br />
+. .&mdash;&mdash;-X&ndash;&gt;C
+. .&mdash;&mdash;/
+M(Pn-1)-&gt;Jn-1&ndash;/
+1&mdash;&mdash;-&gt;Jn&mdash;/
+其中Pi为p的可选参数，Ji为权值，且Sigma(Ji)=1.0，输出为C=Sigma(M(Pi)<em>Ji)+J0+Jn。反馈方法为：
+{Ji=Ji</em>(1+S), if M(Pi){Ji=Ji<em>(1-S), if M(Pi)&gt;C</em>
+{Keep(Sigma(Ji)=1.0)
+其中C*为训练结果输入，S为学习速度。</p>
+
+<p>将01分类器C接到模型分类器M后，就能够确定M分类器的参数p了。虽然p参数可以通过改进模型获得，但是这样能够增加模型M的复杂度，同时给论文增加篇幅，呵呵^_^，不好意思咯。</p>
+
+            </div>
+
+            <div class="pagination">
+                
+                    <a href="http://blog.zhouyiyan.cn/blog/firefox-and-eclipse/">&laquo; Firefox and Eclipse</a>
+                
+                
+                    <a href="http://blog.zhouyiyan.cn/blog/msn-space-is-faster/">MSN Space is Faster &raquo;</a>
+                
+            </div>
+        </section>
+        <br>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+            
+            
+            if (window.location.hostname == "localhost")
+                return;
+            var disqus_shortname = 'zhouyiyan';
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view comments powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>.</noscript>
+</section>
+
+    </section>
+
+        </main>
+        <footer class="row middle-xs center-xs">
+            
+            <div class="col-xs-3 col-md-2"><a href="https://github.com/balzaczyy">GitHub</a></div>
+            
+            
+            <div class="col-xs-3 col-md-2"><a href="https://linkedin.com/in/balzaczyy">LinkedIn</a></div>
+            
+            
+            <div class="col-xs-3 col-md-2"><a href="https://twitter.com/balzaczyy">Twitter</a></div>
+            
+            
+            <div class="col-xs-12">
+                
+                Copyright &copy; 2017 一言.
+                
+                
+                Theme developed by <a href="https://tomanistor.com">Toma Nistor</a>.
+                
+            </div>
+            
+            
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+            
+            <script src="http://blog.zhouyiyan.cn/scripts/main.js" type="text/javascript"></script>
+            
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+        </footer>
+    </body>
+</html>
+
